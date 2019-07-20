@@ -37,6 +37,9 @@ impl Renderable<Crates> for Crates {
             <div>
                 <Main />
                 <Footer />
+                <a href="https://github.com/stefanhoelzl/yew-crates" class="fork-me">
+                  <img src="forkme.png" alt="Fork me on GitHub" />
+                </a>
             </div>
         }
     }
