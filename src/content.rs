@@ -1,26 +1,18 @@
-#![recursion_limit="128"]
-
-mod footer;
-mod content;
-mod header;
-
 use yew::{html, Component, ComponentLink, Html, Renderable, ShouldRender};
 
-use footer::Footer;
-use content::Main;
+use crate::header::Header;
 
 
-pub struct Crates {}
+pub struct Main {}
 
-pub enum Msg {
-}
+pub enum Msg {}
 
-impl Component for Crates {
+impl Component for Main {
     type Message = Msg;
     type Properties = ();
 
     fn create(_: Self::Properties, _: ComponentLink<Self>) -> Self {
-        Crates {}
+        Main {}
     }
 
     fn update(&mut self, _: Self::Message) -> ShouldRender {
@@ -28,13 +20,13 @@ impl Component for Crates {
     }
 }
 
-impl Renderable<Crates> for Crates {
+impl Renderable<Main> for Main {
     fn view(&self) -> Html<Self> {
-        html! {
-            <div>
-                <Main />
-                <Footer />
-            </div>
+        html! { 
+            <main id="main" class="inner-content">
+                <p id="flash"/>
+                <Header />
+            </main>
         }
     }
 }
