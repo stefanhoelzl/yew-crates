@@ -1,5 +1,5 @@
-use yew_crates::Model;
+use yew_crates::Crates;
 
 fn main() {
-    yew::start_app::<Model>();
+    yew::start_app::<Crates>();
 }
