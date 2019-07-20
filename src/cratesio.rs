@@ -79,7 +79,7 @@ impl CratesIoService {
     }
 
     pub fn summary(&mut self, callback: Callback<Result<Summary, Error>>) -> FetchTask {
-        let url = "/summary";
+        let url = "summary";
         let handler = move |response: Response<Json<Result<Summary, Error>>>| {
             let (meta, Json(data)) = response.into_parts();
             if meta.status.is_success() {

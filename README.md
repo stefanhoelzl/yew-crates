@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/stefanhoelzl/yew-crates.svg?branch=master)](https://travis-ci.org/stefanhoelzl/yew-crates)
 # [yew](https://github.com/DenisKolodin/yew)  powered [crates.io](crates.io)
 
 Clone of the [crates.io](crates.io) frontend 

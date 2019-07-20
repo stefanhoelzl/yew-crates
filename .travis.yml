@@ -1,0 +1,24 @@
+os:
+  - linux
+language: rust
+rust:
+  - nightly
+cache: cargo
+install:
+  - rustup target add wasm32-unknown-unknown
+  -  cargo +nightly install cargo-web -Z install-upgrade
+script:
+  - cargo web build --release
+after_success:
+  - mkdir gh-pages-build
+  - touch gh-pages-bild/.nojekyll
+  - cp static/* gh-pages-build
+  - cp target/wasm32-unknown-unknown/release/yew-crates.js gh-pages-build
+  - cp target/wasm32-unknown-unknown/release/yew-crates.wasm gh-pages-build
+deploy:
+  - provider: pages
+    skip-cleanup: true
+    github-token: $GH_TOKEN
+    local-dir: gh-pages-build
+    on:
+      branch: master
