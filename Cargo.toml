@@ -1,0 +1,8 @@
+[package]
+name = "yew-crates"
+version = "0.1.0"
+authors = ["Stefan Hoelzl <stefan.hoelzl@posteo.de>"]
+edition = "2018"
+
+[dependencies]
+yew = {git = "https://github.com/DenisKolodin/yew"}
