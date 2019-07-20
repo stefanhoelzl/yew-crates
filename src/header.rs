@@ -15,6 +15,8 @@ impl Component for Header {
     fn update(&mut self, _: Self::Message) -> ShouldRender {
         true
     }
+
+    fn change(&mut self, _: Self::Properties) -> ShouldRender { false }
 }
 
 impl Renderable<Header> for Header {
@@ -24,7 +26,7 @@ impl Renderable<Header> for Header {
                 <h1>{"The Rust community's crate registry"}</h1>
             
                 <div class="links">
-                    <a href="https://crates.io/install" class="yellow-button">
+                    <a href="https://doc.rust-lang.org/cargo/getting-started/installation.html" class="yellow-button">
                         <img src="button-download.svg" />
                         {" Install Cargo "}
                     </a>

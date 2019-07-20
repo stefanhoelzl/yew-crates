@@ -1304,7 +1304,7 @@ button.small {
     flex-wrap:wrap
 }
 
-#me-email .row .email-form input.ember-text-field {
+#me-email .row .email-form input.text-field {
     width:400px
 }
 
@@ -1608,12 +1608,12 @@ body {
     align-items:center
 }
 
-.ember-application > div {
+.application > div {
     width:960px
 }
 
 @media only screen and (max-width: 960px) {
-    .ember-application > div {
+    .application > div {
         width:100%
     }
 }

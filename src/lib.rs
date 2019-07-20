@@ -1,8 +1,11 @@
-#![recursion_limit="128"]
+#![recursion_limit="256"]
 
 mod footer;
 mod content;
 mod header;
+mod blurb;
+
+mod cratesio;
 
 use yew::{html, Component, ComponentLink, Html, Renderable, ShouldRender};
 

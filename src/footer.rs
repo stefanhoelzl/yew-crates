@@ -15,13 +15,15 @@ impl Component for Footer {
     fn update(&mut self, _: Self::Message) -> ShouldRender {
         true
     }
+
+    fn change(&mut self, _: Self::Properties) -> ShouldRender { false }
 }
 
 impl Renderable<Footer> for Footer {
     fn view(&self) -> Html<Self> {
         html! {
             <footer class="after-main-links">
-                <a href="https://crates.io/install">{"Install"}</a>
+                <a href="https://doc.rust-lang.org/cargo/getting-started/installation.html">{"Install"}</a>
                 <span class="sep">{"|"}</span>
                 <a href="https://doc.rust-lang.org/cargo/">{"Getting Started"}</a>
                 <span class="sep">{"|"}</span>

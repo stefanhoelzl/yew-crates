@@ -5,4 +5,8 @@ authors = ["Stefan Hoelzl <stefan.hoelzl@posteo.de>"]
 edition = "2018"
 
 [dependencies]
+num-format = "0.4.0"
+failure = "0.1"
+serde = "1"
+serde_derive = "1"
 yew = {git = "https://github.com/DenisKolodin/yew"}
